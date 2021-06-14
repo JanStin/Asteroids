@@ -5,12 +5,6 @@ using UnityEngine;
 public class MovePlayer : MonoBehaviour
 {
     private float speed = 5.0f;
-    private Rigidbody rigidbody;
-
-    private void Awake()
-    {
-        rigidbody = GetComponent<Rigidbody>();
-    }
 
     private void Update()
     {
@@ -18,10 +12,16 @@ public class MovePlayer : MonoBehaviour
     }
 
     private void Move()
-    {
-        
-
-        Vector3 movement = new Vector3(speed * Input.GetAxis("Horizontal") * Time.deltaTime, 0);
-        rigidbody.MovePosition(rigidbody.position + movement);
+    {        
+        if (Input.GetKey(KeyCode.D) 
+            && transform.position.x < GameCamera.Size.x - transform.localScale.x / 2)
+        {
+            transform.Translate(speed * Time.deltaTime, 0, 0);
+        }
+        else if (Input.GetKey(KeyCode.A) 
+            && transform.position.x > -GameCamera.Size.x + transform.localScale.x / 2)
+        {
+            transform.Translate(-speed * Time.deltaTime, 0, 0);
+        }
     }
 }
