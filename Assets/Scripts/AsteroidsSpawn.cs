@@ -21,8 +21,8 @@ public class AsteroidsSpawn : MonoBehaviour
         while (true)
         {
             int countAsteroids = random.Next(1, 6);
-
-            for (int i = 0; i < countAsteroids; i++)
+            // TODO: Изменить число появления осколков с одного на рандом
+            for (int i = 0; i < 1; i++)
             {
                 Vector3 spawnPosition = new Vector3(
                     Random.Range(-spawnValues.x, spawnValues.x),
