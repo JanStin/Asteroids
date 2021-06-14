@@ -1,5 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class AsteroidsSpawn : MonoBehaviour
@@ -10,19 +9,35 @@ public class AsteroidsSpawn : MonoBehaviour
 
     private void Start()
     {
-        SpawnWaves();
+        StartCoroutine(SpawnWaves());
     }
 
-    private void SpawnWaves()
+    private IEnumerator SpawnWaves()
     {
-        Vector3 spawnPosition = new Vector3(
-            Random.Range(-spawnValues.x, spawnValues.x), 
-            spawnValues.y, 
-            spawnValues.z
-        );
+        yield return new WaitForSeconds(1);
+        
+        System.Random random = new System.Random();
+        
+        while (true)
+        {
+            int countAsteroids = random.Next(1, 6);
 
-        GameObject tempAsteroid = (GameObject) Instantiate(asteroid, spawnPosition, Quaternion.identity);
-        Rigidbody asteroidRigidbody = tempAsteroid.GetComponent<Rigidbody>();
-        asteroidRigidbody.velocity = speed * new Vector3(0, -1, 0);
+            for (int i = 0; i < countAsteroids; i++)
+            {
+                Vector3 spawnPosition = new Vector3(
+                    Random.Range(-spawnValues.x, spawnValues.x),
+                    spawnValues.y,
+                    spawnValues.z
+                );
+
+                GameObject tempAsteroid = (GameObject)Instantiate(asteroid, spawnPosition, Quaternion.identity);
+                Rigidbody asteroidRigidbody = tempAsteroid.GetComponent<Rigidbody>();
+                asteroidRigidbody.velocity = speed * new Vector3(0, -1, 0);
+
+                yield return new WaitForSeconds(Random.Range(0.3f, 1.2f));
+            }
+
+            yield return new WaitForSeconds(4);
+        }        
     }
 }
