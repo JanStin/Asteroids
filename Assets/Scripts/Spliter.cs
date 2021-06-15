@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Spliter : Asteroid
+public class Spliter : SpaceObject
 {
     private void Start()
     {

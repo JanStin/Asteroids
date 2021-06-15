@@ -12,8 +12,8 @@ GameObject:
   - component: {fileID: 5477955377430049304}
   - component: {fileID: 5574389080359470703}
   - component: {fileID: 7969949003037554141}
-  - component: {fileID: -1804558490930950772}
-  - component: {fileID: 1255815795321409980}
+  - component: {fileID: 7810004787474611428}
+  - component: {fileID: -7153341301257283454}
   m_Layer: 0
   m_Name: Splinter
   m_TagString: Untagged
@@ -97,7 +97,7 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
---- !u!54 &-1804558490930950772
+--- !u!54 &7810004787474611428
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -113,7 +113,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &1255815795321409980
+--- !u!114 &-7153341301257283454
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -125,4 +125,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2017c2bd36686b04384214481090e0c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  splinter: {fileID: 0}
