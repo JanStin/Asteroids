@@ -2,15 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(Rigidbody))]
 public class Asteroid : MonoBehaviour
 {
-    [SerializeField] private GameObject splinter;
+    [SerializeField] private GameObject splinter;    
 
-    private float lifeTime = 5.0f;
+    protected float lifeTime = 5.0f;
     
 
     private void Start()
     {
+        Rotate();
         Destroy(gameObject, lifeTime);
     }
 
@@ -26,5 +28,10 @@ public class Asteroid : MonoBehaviour
             Rigidbody splinterRigidbody = tempSplinter.GetComponent<Rigidbody>();
             splinterRigidbody.velocity = new Vector3(0, Random.Range(-1, 1), 0);
         }
+    }
+
+    protected void Rotate()
+    {
+        gameObject.GetComponent<Rigidbody>().angularVelocity = new Vector3(3, 3, 3);
     }
 }
