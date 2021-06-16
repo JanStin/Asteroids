@@ -237,7 +237,7 @@ GameObject:
   - component: {fileID: 294225079}
   - component: {fileID: 294225078}
   m_Layer: 5
-  m_Name: Label change
+  m_Name: Label
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -259,8 +259,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -90, y: -20}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchoredPosition: {x: -90, y: -30}
+  m_SizeDelta: {x: 160, y: 60}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &294225078
 MonoBehaviour:
@@ -295,7 +295,11 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u0421\u043C\u0435\u043D\u0438\u0442\u044C \u0432\u0438\u0434 F1\n"
+  m_Text: 'Change view F1
+
+    Cooldown laser 10s
+
+    Max Laser x2'
 --- !u!222 &294225079
 CanvasRenderer:
   m_ObjectHideFlags: 0
