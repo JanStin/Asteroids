@@ -15,5 +15,6 @@ public class Bullet : MonoBehaviour
     {
         Destroy(gameObject);
         Destroy(other.gameObject);
+        GameAsteroidManager.ChangeScore();
     }
 }

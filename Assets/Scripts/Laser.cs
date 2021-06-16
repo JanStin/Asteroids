@@ -9,7 +9,7 @@ public class Laser : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        print(other);
         Destroy(other.gameObject);
+        GameAsteroidManager.ChangeScore();
     }
 }

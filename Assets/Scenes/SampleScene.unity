@@ -702,7 +702,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 200, y: 50}
+  m_SizeDelta: {x: 250, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1319290972
 MonoBehaviour:
@@ -737,7 +737,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Game Over
+  m_Text: 'Game Over! Your score: 100'
 --- !u!222 &1319290973
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -822,6 +822,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1886116026}
   - component: {fileID: 1886116025}
+  - component: {fileID: 1886116027}
   m_Layer: 0
   m_Name: GameController
   m_TagString: Untagged
@@ -858,6 +859,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1886116027
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1886116024}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 21f54ca2c0e0f294781c7735c3040a12, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scoreLabel: {fileID: 930669213}
+  gameOverLabel: {fileID: 1319290972}
 --- !u!1001 &6036021447646828677
 PrefabInstance:
   m_ObjectHideFlags: 0

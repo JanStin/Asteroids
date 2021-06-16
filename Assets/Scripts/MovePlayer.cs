@@ -27,7 +27,7 @@ public class MovePlayer : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        print("Game Over");
+        GameAsteroidManager.gameAsteroidManager.GameOver();
         transform.position = new Vector3(0, -4, 0);
     }
 }
