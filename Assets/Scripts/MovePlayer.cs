@@ -24,4 +24,10 @@ public class MovePlayer : MonoBehaviour
             transform.Translate(-speed * Time.deltaTime, 0, 0);
         }
     }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        print("Game Over");
+        transform.position = new Vector3(0, -4, 0);
+    }
 }
