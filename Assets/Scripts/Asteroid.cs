@@ -4,11 +4,14 @@ using UnityEngine;
 
 public class Asteroid : SpaceObject
 {
-    [SerializeField] private GameObject splinter;    
-    
+    [SerializeField] private GameObject splinter;
+
     private void Start()
     {
         lifeTime = 6.0f;
+        speed = 2.0f;
+        direction = new Vector3(0, -1, 0);
+
         Rotate();
         Destroy(gameObject, lifeTime);
     }

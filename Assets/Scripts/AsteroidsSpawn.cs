@@ -21,7 +21,7 @@ public class AsteroidsSpawn : MonoBehaviour
         while (true)
         {
             int countAsteroids = random.Next(1, 6);
-            // TODO: Изменить число появления осколков с одного на рандом
+            
             for (int i = 0; i < countAsteroids; i++)
             {
                 Vector3 spawnPosition = new Vector3(
@@ -30,9 +30,9 @@ public class AsteroidsSpawn : MonoBehaviour
                     spawnValues.z
                 );
 
-                GameObject tempAsteroid = Instantiate(asteroid, spawnPosition, Quaternion.identity);
-                Rigidbody asteroidRigidbody = tempAsteroid.GetComponent<Rigidbody>();
-                asteroidRigidbody.velocity = speed * new Vector3(0, -1, 0);
+                Instantiate(asteroid, spawnPosition, Quaternion.identity);
+                //Rigidbody asteroidRigidbody = tempAsteroid.GetComponent<Rigidbody>();
+                //asteroidRigidbody.velocity = speed * new Vector3(0, -1, 0);
 
                 yield return new WaitForSeconds(Random.Range(0.3f, 1.2f));
             }
