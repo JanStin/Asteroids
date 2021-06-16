@@ -4,8 +4,13 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
-    [SerializeField] private Transform player;
+    private Transform player;
     private float speed = 3.0f;
+
+    private void Start()
+    {
+        player = GameObject.Find("Player").transform;
+    }
 
     private void Update()
     {
