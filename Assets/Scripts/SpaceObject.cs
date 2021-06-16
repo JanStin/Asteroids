@@ -7,7 +7,7 @@ abstract public class SpaceObject : MonoBehaviour
 {
     protected float lifeTime; 
     protected Rigidbody rbObject;
-    protected float speed;
+    protected float speed = 2.0f;
     protected Vector3 direction;
 
     private void Awake()

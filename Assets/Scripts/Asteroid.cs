@@ -9,7 +9,6 @@ public class Asteroid : SpaceObject
     private void Start()
     {
         lifeTime = 6.0f;
-        speed = 2.0f;
         direction = new Vector3(0, -1, 0);
 
         Rotate();

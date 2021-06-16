@@ -823,6 +823,7 @@ GameObject:
   - component: {fileID: 1886116026}
   - component: {fileID: 1886116025}
   - component: {fileID: 1886116027}
+  - component: {fileID: 1886116028}
   m_Layer: 0
   m_Name: GameController
   m_TagString: Untagged
@@ -842,9 +843,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0dc31dcf88452e04da3ab308d4f89329, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  asteroid: {fileID: 3999222379522899941, guid: b6d2d2b87e7a51b44858e308daa5516d, type: 3}
+  spawnObject: {fileID: 3999222379522899941, guid: b6d2d2b87e7a51b44858e308daa5516d, type: 3}
   spawnValues: {x: 2.5, y: 5.5, z: 0}
-  speed: 2
+  maxCountSpawnObject: 7
+  timeBetweenWaves: 4
 --- !u!4 &1886116026
 Transform:
   m_ObjectHideFlags: 0
@@ -873,6 +875,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scoreLabel: {fileID: 930669213}
   gameOverLabel: {fileID: 1319290972}
+--- !u!114 &1886116028
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1886116024}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0dc31dcf88452e04da3ab308d4f89329, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnObject: {fileID: 6421415603322764547, guid: c622cf9e063013b428569eb90537f1bf, type: 3}
+  spawnValues: {x: 2.5, y: 6, z: 0}
+  maxCountSpawnObject: 4
+  timeBetweenWaves: 6
 --- !u!1001 &6036021447646828677
 PrefabInstance:
   m_ObjectHideFlags: 0

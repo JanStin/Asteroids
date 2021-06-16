@@ -1,11 +1,12 @@
 using System.Collections;
 using UnityEngine;
 
-public class AsteroidsSpawn : MonoBehaviour
+public class Spawn : MonoBehaviour
 {
-    [SerializeField] private GameObject asteroid;
+    [SerializeField] private GameObject spawnObject;
     [SerializeField] private Vector3 spawnValues;
-    public float speed = 2.0f;
+    public int maxCountSpawnObject = 5;
+    public float timeBetweenWaves = 4;
 
     private void Start()
     {
@@ -20,9 +21,9 @@ public class AsteroidsSpawn : MonoBehaviour
         
         while (true)
         {
-            int countAsteroids = random.Next(1, 6);
+            int countSpawnObject = random.Next(1, maxCountSpawnObject + 1);
             
-            for (int i = 0; i < countAsteroids; i++)
+            for (int i = 0; i < countSpawnObject; i++)
             {
                 Vector3 spawnPosition = new Vector3(
                     Random.Range(-spawnValues.x, spawnValues.x),
@@ -30,14 +31,12 @@ public class AsteroidsSpawn : MonoBehaviour
                     spawnValues.z
                 );
 
-                Instantiate(asteroid, spawnPosition, Quaternion.identity);
-                //Rigidbody asteroidRigidbody = tempAsteroid.GetComponent<Rigidbody>();
-                //asteroidRigidbody.velocity = speed * new Vector3(0, -1, 0);
+                Instantiate(spawnObject, spawnPosition, Quaternion.identity);
 
                 yield return new WaitForSeconds(Random.Range(0.3f, 1.2f));
             }
 
-            yield return new WaitForSeconds(4);
+            yield return new WaitForSeconds(timeBetweenWaves);
         }        
     }
 }
